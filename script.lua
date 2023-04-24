@@ -286,12 +286,13 @@ BackpackUI.Connections = {
 			for i = 1,#letnum do
 				if input.KeyCode.Name == letnum[i] then
 					num = i
+					print(num)
 				end
 			end
 			if num then
 				local tool = BackpackUI.CurrentSlots[num]
 				equipOrUnequip(tool)
-
+				print(tool)
 			end
 		end
 
