@@ -169,10 +169,10 @@ function tool(child, backpack)
 				end
 				conn:Disconnect()
 			end
-			if parent.Name == lp.Name then
+			if parent ~= nil and parent.Name == lp.Name then
 				UpFrame(Slot)
 			end
-			if parent.Name == "Backpack" then
+			if parent ~= nil and parent.Name == "Backpack" then
 				DownFrame(Slot)
 			end
 		end)
