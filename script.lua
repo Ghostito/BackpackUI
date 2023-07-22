@@ -1,7 +1,4 @@
--- Gui to Lua
--- Version: 3.2
 
--- Instances:
 local players = game:GetService("Players")
 local ts = game:GetService("TweenService")
 local uis = game:GetService("UserInputService")
@@ -172,10 +169,10 @@ function tool(child, backpack)
 				end
 				conn:Disconnect()
 			end
-			if parent == lp.Character then
+			if parent.Name == lp.Name then
 				UpFrame(Slot)
 			end
-			if parent == lp.Backpack then
+			if parent.Name == "Backpack" then
 				DownFrame(Slot)
 			end
 		end)
@@ -286,13 +283,11 @@ BackpackUI.Connections = {
 			for i = 1,#letnum do
 				if input.KeyCode.Name == letnum[i] then
 					num = i
-					print(num)
 				end
 			end
 			if num then
 				local tool = BackpackUI.CurrentSlots[num]
 				equipOrUnequip(tool)
-				print(tool)
 			end
 		end
 
