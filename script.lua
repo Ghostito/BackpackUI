@@ -13,7 +13,8 @@ local BackpackUI = {
 	Animations = true,
 	EquipColor = Color3.fromRGB(24, 105, 255),
 	EquipAnimTime = 0.1,
-	Disconnected = false
+	Disconnected = false,
+	Version = 1
 }
 local ScreenGui = Instance.new("ScreenGui")
 local Base = Instance.new("Frame")
